@@ -102,7 +102,9 @@ In this case, a directory and all the necessary files will be created, as in the
 However, now the program searches for "reference" rpm packages inside the home directory, rather than accessing the usb device.
 
 3. We can also use the root directory to search for "reference" rpm packages.
-   However, be extremely careful!!!    USING THE ROOT DIRECTORY CAN LEAD TO SYSTEM PROBLEMS.
+   However, be extremely careful!!!
+   USING THE ROOT DIRECTORY CAN LEAD TO SYSTEM PROBLEMS.
+   
 ```
 checkrpms --root -t (sha256, md5, gost)
 ```
