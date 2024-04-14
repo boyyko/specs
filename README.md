@@ -69,7 +69,7 @@ checkrpms --usb -t (sha256, md5, gost)
 The hash type allows you to use various hash algorithms for found ELF files.
 During the execution of the program, a separate alt-checksums directory will be created in which the files will be created:
 ```
-failed-checksums.list- The result of comparing the ELF files installed from rpm and the "reference" ELF files.
+* failed-checksums.list- The result of comparing the ELF files installed from rpm and the "reference" ELF files.
 Contains the checksums of the files and the status FALSE
 
 failed_rpm_check.list-
