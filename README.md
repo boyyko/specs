@@ -61,8 +61,7 @@ To run using all three main arguments (--home, --root, --usb) and encryption alg
 checkrpms --home --root --usb -t (sha256, md5, gost)
 ```
 ## Example
-1. Suppose we want to check the ELF files of our system that were installed from rpm packages.
-We have "reference" rpm packages in the usb device.  Run the program.
+1. Suppose we want to check the ELF files of our system that were installed from rpm packages.  We have "reference" rpm packages in the usb device.  Run the program.
 ```
 checkrpms --usb -t (sha256, md5, gost)
 ```
