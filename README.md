@@ -79,8 +79,8 @@ Example result.list
 ```
 --------------------------------------------
 foo-0.9.0
-<hash> /alt-checksums/files/libfoo.so.0.9.0
-<hash> /usr/lib64/libfoo.so.0.9.0
+<hash> /alt-checksums/files/libfoo.so.0.9.0  # "reference" ELF file
+<hash> /usr/lib64/libfoo.so.0.9.0            # Installed by rpm package ELF file
 TRUE
 --------------------------------------------
 ```
@@ -88,8 +88,8 @@ Example failed-checksums.list
 ```
 --------------------------------------------
 hello
-<hash>  /alt-checksums/files/hello
-<hash>  /usr/bin/hello
+<hash>  /alt-checksums/files/hello # "reference" ELF file
+<hash>  /usr/bin/hello             # Installed by rpm package ELF file 
 FALSE
 --------------------------------------------
 ```
