@@ -61,7 +61,8 @@ To run using all three main arguments (--home, --root, --usb) and encryption alg
 checkrpms --home --root --usb -t (sha256, md5, gost)
 ```
 ## Example
-1. Suppose we want to check the ELF files of our system that were installed from rpm packages.  We have "reference" rpm packages in the usb device.  Run the program.
+1. Suppose we want to check the ELF files of our system that were installed from rpm packages.
+   We have "reference" rpm packages in the usb device. Run the program.
 ```
 checkrpms --usb -t (sha256, md5, gost)
 ```
@@ -92,8 +93,27 @@ hello
 FALSE
 --------------------------------------------
 ```
+2. We have "reference" rpm packages located somewhere in the home directory.
+In this case, we run the program like this:
+```
+checkrpms --home -t (sha256, md5, gost)
+```
+In this case, a directory and all the necessary files will be created, as in the previous example.
+However, now the program searches for "reference" rpm packages inside the home directory, rather than accessing the usb device.
 
-
+3. We can also use the root directory to search for "reference" rpm packages
+However, be extremely careful!!!
+USING THE ROOT DIRECTORY CAN LEAD TO SYSTEM PROBLEMS.
+```
+checkrpms --root -t (sha256, md5, gost)
+```
+4. We can also combine arguments or use all 3 search points for "reference" rpm packages.
+```
+checkrpms --home --usb -t (sha256, md5, gost)
+checkrpms --root --usb -t (sha256, md5, gost)
+checkrpms --home --usb --root -t (sha256, md5, gost)
+checkrpms --home --root -t (sha256, md5, gost)
+```
 
 
 
