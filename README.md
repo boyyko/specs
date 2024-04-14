@@ -43,16 +43,19 @@ Specifying the hash option is required
 ## Example  
 
 To start the program using the default settings:
+```
 checkrpms --home
-
+```
 
 To run the program using the home directory and encryption using the SHA-256 algorithm:
+```
 checkrpms --home -t sha256
-
+```
 
 To run using all three main arguments (--home, --root, --usb):
+```
 checkrpms --home --root --usb
-
+```
 
 To run using all three main arguments and the encryption type (--home, --root, --usb):
 checkrpms --home --root --usb -t (sha256, md5, gost)
