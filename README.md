@@ -40,7 +40,7 @@ Specifying the hash option is required
 -h, --help - Help
 ```
 
-## Example  
+## Starting  
 
 To start the program using the default settings:
 ```
