@@ -22,19 +22,23 @@ The main arguments and examples of their use are presented below.
 ### Arguments
 
 The arguments allow you to specify the mounting points where files will be searched.
+```
 
 --home - Launch the program at the mount point of the home directory.
 --root - Running the program at the root mount point
 --usb - Launch the program with access to USB devices.
+```
 
 ### Additional encryption options
 
 Specifying the hash option is required 
+```
 
 -t sha256 - Using the SHA-256 encryption algorithm.
 -t gost - Using the GOST encryption algorithm.
 -t md5 - Using the MD5 encryption algorithm.
 -h, --help - Help
+```
 
 ## Example  
 
