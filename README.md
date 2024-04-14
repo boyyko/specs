@@ -44,20 +44,44 @@ Specifying the hash option is required
 
 To start the program using the default settings:
 ```
-checkrpms --home
-```
-
-To run the program using the home directory and encryption using the SHA-256 algorithm:
-```
 checkrpms --home -t sha256
 ```
 
-To run using all three main arguments (--home, --root, --usb):
+To run the program using the root directory and encryption algorithm:
 ```
-checkrpms --home --root --usb
+checkrpms --root -t (sha256, md5, gost)
+```
+To run the program using the usb directory and encryption algorithm:
+```
+checkrpms --usb -t (sha256, md5, gost)
 ```
 
-To run using all three main arguments and the encryption type (--home, --root, --usb):
+To run using all three main arguments (--home, --root, --usb) and encryption algorithm:
 ```
 checkrpms --home --root --usb -t (sha256, md5, gost)
 ```
+## Example
+Suppose we want to check the ELF files of our system that were installed from rpm packages.
+We have "reference" rpm packages. Let's put the "reference" rpm packages into a usb device and run the program.
+```
+checkrpms --usb -t (sha256, md5, gost)
+```
+The hash type allows you to use various hash algorithms for found ELF files.
+During the execution of the program, a separate alt-checksums directory will be created in which the files will be created:
+```
+failed-checksums.list- The result of comparing the ELF files installed from rpm and the "reference" ELF files.
+Contains the checksums of the files and the status FALSE
+
+failed_rpm_check.list-
+result.list
+rpm
+files
+```
+
+
+
+
+
+
+
+
