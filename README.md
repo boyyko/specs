@@ -61,8 +61,8 @@ To run using all three main arguments (--home, --root, --usb) and encryption alg
 checkrpms --home --root --usb -t (sha256, md5, gost)
 ```
 ## Example
-Suppose we want to check the ELF files of our system that were installed from rpm packages.
-We have "reference" rpm packages. Let's put the "reference" rpm packages into a usb device and run the program.
+1. Suppose we want to check the ELF files of our system that were installed from rpm packages.
+We have "reference" rpm packages in the usb device.  Run the program.
 ```
 checkrpms --usb -t (sha256, md5, gost)
 ```
@@ -80,7 +80,7 @@ Example result.list
 --------------------------------------------
 foo-0.9.0
 <hash> /alt-checksums/files/libfoo.so.0.9.0  # "reference" ELF file
-<hash> /usr/lib64/libfoo.so.0.9.0            # Installed by rpm package ELF file
+<hash> /usr/lib64/libfoo.so.0.9.0            # Installed in system ELF file
 TRUE
 --------------------------------------------
 ```
@@ -89,7 +89,7 @@ Example failed-checksums.list
 --------------------------------------------
 hello
 <hash>  /alt-checksums/files/hello # "reference" ELF file
-<hash>  /usr/bin/hello             # Installed by rpm package ELF file 
+<hash>  /usr/bin/hello             # Installed in system ELF file 
 FALSE
 --------------------------------------------
 ```
