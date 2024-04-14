@@ -58,4 +58,6 @@ checkrpms --home --root --usb
 ```
 
 To run using all three main arguments and the encryption type (--home, --root, --usb):
+```
 checkrpms --home --root --usb -t (sha256, md5, gost)
+```
