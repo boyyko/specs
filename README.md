@@ -10,9 +10,9 @@ Then hashes and compares the files, checking their integrity with reference file
 
 ## Requires
 
-gostsum
-sha256sum
-md5sum
+* gostsum
+* sha256sum
+* md5sum
 
 ## Usage
 
