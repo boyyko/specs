@@ -66,6 +66,13 @@ checkrpms --home --root --usb -t (sha256, md5, gost)
 ```
 checkrpms --usb -t (sha256, md5, gost)
 ```
+```
+$ checkrpms --usb -t sha256
+Начинаем поиск точек монтирования:
+Найденные точки монтирования: ['/run/media/USERNAME/USB_NAME']
+
+```
+
 The hash type allows you to use various hash algorithms for found ELF files.  
 During the execution of the program, a separate alt-checksums directory will be created in which the files will be created:
 
@@ -100,6 +107,11 @@ checkrpms --home -t (sha256, md5, gost)
 ```
 In this case, a directory and all the necessary files will be created, as in the previous example.
 However, now the program searches for "reference" rpm packages inside the home directory, rather than accessing the usb device.
+```
+$ checkrpms --home -t sha256
+Начинаем поиск точек монтирования:
+Найденные точки монтирования: ['/home']
+```
 
 3. We can also use the root directory to search for "reference" rpm packages.
    However, be extremely careful!!!
@@ -108,6 +120,12 @@ However, now the program searches for "reference" rpm packages inside the home d
 ```
 checkrpms --root -t (sha256, md5, gost)
 ```
+```
+$ checkrpms --root -t sha256
+Начинаем поиск точек монтирования:
+Найденные точки монтирования: ['/']
+```
+
 4. We can also combine arguments or use all 3 search points for "reference" rpm packages.
 ```
 checkrpms --home --usb -t (sha256, md5, gost)
@@ -115,6 +133,11 @@ checkrpms --root --usb -t (sha256, md5, gost)
 checkrpms --home --usb --root -t (sha256, md5, gost)
 checkrpms --home --root -t (sha256, md5, gost)
 ```
+```
+$ checkrpms --home --root --usb -t sha256
+Начинаем поиск точек монтирования:
+Найденные точки монтирования: ['/home', '/run/media/USERNAME/USB_NAME', '/']
 
+```
 
 
